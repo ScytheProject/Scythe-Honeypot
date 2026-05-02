@@ -576,7 +576,7 @@ SOFTWARE.
 
 <div align="center">
 
-**Laisse une ⭐ sur GitHub !**
+**Laisse une ⭐ bg**
 
 *Made with 💚 for security-conscious users*
 
