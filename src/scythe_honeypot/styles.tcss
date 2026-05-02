@@ -1,0 +1,626 @@
+/* styles.tcss - Scythe Honeypot
+   DA inspirée Bagels, palette Scythe Green + accents */
+
+/* === VARIABLES === */
+
+$scythe-green: #00DC82;
+$scythe-green-dim: #00A862;
+$scythe-green-bg: #0A2E1F;
+
+$amber: #F59E0B;
+$red: #EF4444;
+$cyan: #06B6D4;
+
+$bg-primary: #0A0A0A;
+$bg-secondary: #141414;
+
+$text-primary: #E5E7EB;
+$text-secondary: #9CA3AF;
+$text-muted: #4B5563;
+
+$border: #FFFFFF;     
+$border-dim: #6B7280; 
+
+
+/* === GLOBAL === */
+Screen {
+    background: $bg-primary;
+    color: $text-primary;
+    layout: vertical;
+}
+
+
+/* === HEADER === */
+Button {
+    scrollbar-size: 0 0;
+}
+AppHeader {
+    height: 1;
+    width: 100%;          /* ← ajouté */
+    dock: top;             /* ← ajouté */
+    background: $bg-primary;
+    padding: 0 2;
+}
+
+AppHeader Horizontal {
+    height: 1;
+}
+
+AppHeader .header-logo {
+    color: $scythe-green;
+    text-style: bold;
+    width: auto;
+    margin-right: 2;
+}
+
+AppHeader .header-version {
+    color: $text-muted;
+    width: auto;
+    margin-right: 3;
+}
+
+AppHeader .header-nav-active {
+    color: $scythe-green;
+    text-style: bold;
+    background: $scythe-green-bg;
+    padding: 0 1;
+    margin-right: 1;
+}
+
+AppHeader .header-nav-inactive {
+    color: $text-secondary;
+    padding: 0 1;
+    margin-right: 1;
+}
+
+AppHeader .header-spacer {
+    width: 1fr;
+}
+
+AppHeader .header-status {
+    color: $scythe-green;
+    text-style: bold;
+    width: auto;
+}
+
+
+/* === FOOTER === */
+AppFooter {
+    height: 1;
+    width: 100%;          /* ← ajouté : prend toute la largeur */
+    dock: bottom;          /* ← ajouté : reste collé en bas */
+    background: $bg-primary;
+    padding: 0 1;
+    border-top: solid $scythe-green-dim;
+}
+
+AppFooter Horizontal {
+    height: 1;
+}
+
+AppFooter .key {
+    color: $scythe-green;
+    text-style: bold;
+    width: auto;
+}
+
+AppFooter .desc {
+    color: $text-secondary;
+    width: auto;
+    margin-right: 2;
+}
+
+AppFooter .footer-spacer {
+    width: 1fr;
+}
+
+AppFooter .footer-status {
+    color: $scythe-green;
+    width: auto;
+}
+
+
+/* === STATS PANEL === */
+StatsPanel {
+    width: 22;
+    height: 7;
+    border: round #FFFFFF;
+    padding: 0 1;
+    background: $bg-secondary;
+}
+
+
+StatsPanel .panel-title {
+    color: $scythe-green;
+    text-style: bold;
+    margin-bottom: 1;
+}
+
+StatsPanel .stat-line {
+    height: 1;
+}
+
+StatsPanel .stat-armed {
+    color: $scythe-green;
+}
+
+StatsPanel .stat-triggered {
+    color: $amber;
+}
+
+StatsPanel .stat-total {
+    color: $text-secondary;
+}
+
+
+/* === LAST ALERT PANEL === */
+LastAlertPanel {
+    width: 22;
+    height: 8;
+    border: round $amber;
+    padding: 0 1;
+    background: $bg-secondary;
+}
+
+LastAlertPanel .panel-title {
+    color: $amber;
+    text-style: bold;
+    margin-bottom: 1;
+}
+
+LastAlertPanel .alert-name {
+    color: $text-primary;
+    text-style: bold;
+}
+
+LastAlertPanel .alert-event {
+    color: $amber;
+}
+
+LastAlertPanel .alert-process {
+    color: $cyan;
+}
+
+LastAlertPanel .alert-time {
+    color: $text-muted;
+}
+
+
+/* === CANARIES TABLE === */
+CanariesTable {
+    height: 9;
+    border: round #FFFFFF;
+    padding: 0 1;
+    background: $bg-secondary;
+}
+
+CanariesTable DataTable {
+    background: $bg-secondary;
+    height: 1fr;
+}
+
+
+CanariesTable .panel-title {
+    color: $scythe-green;
+    text-style: bold;
+    margin-bottom: 1;
+}
+
+
+/* === EVENTS TABLE === */
+EventsTable {
+    height: 9;
+    border: round #FFFFFF;
+    padding: 0 1;
+    background: $bg-secondary;
+}
+
+EventsTable DataTable {
+    background: $bg-secondary;
+    height: 1fr;
+}
+
+EventsTable .panel-title {
+    color: $scythe-green;
+    text-style: bold;
+    margin-bottom: 1;
+}
+
+/* === HOME VIEW === */
+HomeView {
+    background: $bg-primary;
+    height: auto;          /* ← changé : auto au lieu de 1fr */
+    padding: 1 2;
+    layout: vertical;
+}
+
+.row {
+    height: auto;
+    margin-bottom: 1;
+    layout: horizontal;
+}
+
+.left-col {
+    width: 24;
+    margin-right: 2;
+    height: auto;
+    layout: vertical;
+}
+
+.right-col {
+    width: 1fr;
+    height: auto;
+    layout: vertical;
+}
+
+/* === CANARY CREATOR === */
+/* === CANARY CREATOR === */
+CanaryCreator {
+    height: auto;
+    width: 100%;
+    border: round #FFFFFF;
+    padding: 1 2;
+    background: $bg-secondary;
+    margin-top: 1;
+}
+
+CanaryCreator .panel-title {
+    color: $scythe-green;
+    text-style: bold;
+    margin-bottom: 1;
+}
+
+CanaryCreator .creator-form {
+    height: auto;
+    width: 100%;
+}
+
+CanaryCreator .form-row {
+    height: auto;
+    width: 100%;
+    margin-bottom: 1;
+}
+
+CanaryCreator .form-label {
+    width: 10;
+    color: $text-secondary;
+    padding-top: 1;
+}
+
+CanaryCreator Input {
+    width: 1fr;
+    background: $bg-primary;
+    color: $text-primary;
+    border: solid $scythe-green-dim;
+    height: 3;
+}
+
+CanaryCreator Input:focus {
+    border: solid $scythe-green;
+}
+
+CanaryCreator RadioSet {
+    width: 1fr;
+    height: auto;
+    background: $bg-primary;
+    border: solid $scythe-green-dim;
+    layout: horizontal;
+    padding: 0;
+}
+
+CanaryCreator RadioSet:focus-within {
+    border: solid $scythe-green;
+}
+
+CanaryCreator RadioButton {
+    background: $bg-primary;
+    margin: 0 1;
+    border: none;
+}
+
+CanaryCreator RadioButton.-on {
+    color: $scythe-green;
+    text-style: bold;
+}
+
+CanaryCreator .form-checkboxes {
+    width: 1fr;
+    height: auto;
+    layout: horizontal;
+}
+
+CanaryCreator Checkbox {
+    margin-right: 2;
+    background: $bg-secondary;
+    border: none;
+    height: 1;
+}
+
+CanaryCreator Checkbox.-on {
+    color: $scythe-green;
+}
+
+CanaryCreator Button {
+    width: auto;
+    min-width: 25;
+    background: $scythe-green-bg;
+    color: $scythe-green;
+    text-style: bold;
+    border: solid $scythe-green;
+    margin-top: 1;
+}
+
+CanaryCreator Button:hover {
+    background: $scythe-green;
+    color: $bg-primary;
+}
+
+CanaryCreator Button:focus {
+    background: $scythe-green;
+    color: $bg-primary;
+    text-style: bold;
+}
+
+/* === CANARIES LIST === */
+CanariesList {
+    height: auto;
+    max-height: 20;
+    border: round #FFFFFF;
+    padding: 0 1;
+    background: #141414;
+}
+
+CanariesList .panel-title {
+    color: #00DC82;
+    text-style: bold;
+    margin-bottom: 1;
+}
+
+CanariesList VerticalScroll {
+    height: auto;
+    max-height: 16;
+}
+
+CanariesList .empty-state {
+    color: #4B5563;
+    text-align: center;
+    padding: 2 0;
+}
+
+
+/* === CANARY CARD === */
+CanaryCard {
+    height: auto;
+    width: 100%;
+    border: round #FFFFFF;
+    padding: 0 1;
+    margin-bottom: 1;
+    background: $bg-primary;
+}
+
+CanaryCard.status-triggered {
+    border: round $amber;
+    background: $bg-secondary;
+}
+
+CanaryCard.status-disarmed {
+    border: round #4B5563;
+    background: $bg-primary;
+}
+CanaryCard.status-error {
+    border: round $red;
+}
+
+CanaryCard .card-body {
+    height: auto;
+    width: 100%;
+}
+
+CanaryCard .card-header {
+    height: 1;
+    width: 100%;
+}
+
+CanaryCard .card-title {
+    text-style: bold;
+    width: 1fr;
+    color: $text-primary;
+}
+
+CanaryCard .card-title.type-wallet   { color: #FBBF24; }
+CanaryCard .card-title.type-ssh_key  { color: #06B6D4; }
+CanaryCard .card-title.type-password { color: #EF4444; }
+CanaryCard .card-title.type-database { color: #A78BFA; }
+CanaryCard .card-title.type-pdf      { color: #9CA3AF; }
+CanaryCard .card-title.type-zip      { color: #34D399; }
+
+CanaryCard .card-status {
+    width: auto;
+    text-style: bold;
+}
+
+CanaryCard .card-status.status-armed     { color: $scythe-green; }
+CanaryCard .card-status.status-triggered { color: $amber; }
+CanaryCard .card-status.status-disarmed  { color: $text-muted; }
+CanaryCard .card-status.status-error     { color: $red; }
+
+CanaryCard .card-meta {
+    color: $text-secondary;
+    height: 1;
+}
+
+CanaryCard .card-footer {
+    height: 3;
+    width: 100%;
+    margin-top: 1;
+}
+
+CanaryCard .card-stats {
+    color: $text-muted;
+    width: 1fr;
+    padding-top: 1;
+}
+
+CanaryCard .card-actions {
+    width: auto;
+    height: 3;
+}
+
+CanaryCard .card-btn {
+    width: auto;
+    min-width: 11;
+    height: 3;
+    margin-left: 1;
+    border: solid #FFFFFF;
+    background: #141414;
+    color: #E5E7EB;
+    scrollbar-size: 0 0;
+}
+
+CanaryCard .btn-toggle-pause {
+    border: solid $amber;
+    color: $amber;
+}
+
+CanaryCard .btn-toggle-pause:hover {
+    background: $amber;
+    color: $bg-primary;
+}
+
+CanaryCard .btn-toggle-resume {
+    border: solid $scythe-green;
+    color: $scythe-green;
+}
+
+CanaryCard .btn-toggle-resume:hover {
+    background: $scythe-green;
+    color: $bg-primary;
+}
+
+CanaryCard .btn-view {
+    border: solid $cyan;
+    color: $cyan;
+}
+
+CanaryCard .btn-view:hover {
+    background: $cyan;
+    color: $bg-primary;
+}
+
+CanaryCard .btn-delete {
+    border: solid $red;
+    color: $red;
+}
+
+CanaryCard .btn-delete:hover {
+    background: $red;
+    color: $bg-primary;
+}
+
+
+/* === MODALS === */
+ConfirmModal, CanaryDetailsModal {
+    align: center middle;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#modal-container {
+    width: auto;
+    height: auto;
+    align: center middle;
+}
+
+#modal-box {
+    width: 60;
+    height: auto;
+    background: #141414;
+    border: round #00DC82;
+    padding: 2 3;
+}
+
+#modal-box-large {
+    width: 70;
+    height: auto;
+    background: #141414;
+    border: round #00DC82;
+    padding: 2 3;
+}
+
+#modal-title {
+    color: #00DC82;
+    text-style: bold;
+    margin-bottom: 1;
+    text-align: center;
+}
+
+#modal-message {
+    color: #E5E7EB;
+    margin-bottom: 2;
+    text-align: center;
+}
+
+#modal-actions {
+    height: 3;
+    align: center middle;
+}
+
+#modal-actions Button {
+    margin: 0 1;
+    min-width: 14;
+    border: solid #00A862;
+    background: #141414;
+    color: #E5E7EB;
+    scrollbar-size: 0 0;
+}
+
+#modal-actions Button.-success,
+#modal-actions Button.-primary {
+    border: solid #00DC82;
+    color: #00DC82;
+}
+
+#modal-actions Button.-error {
+    border: solid #EF4444;
+    color: #EF4444;
+}
+
+#modal-actions Button:hover {
+    background: #00DC82;
+    color: #0A0A0A;
+}
+
+#modal-actions Button.-error:hover {
+    background: #EF4444;
+    color: #0A0A0A;
+}
+
+CanaryDetailsModal .details-name {
+    color: #00DC82;
+    text-style: bold;
+    text-align: center;
+    margin-bottom: 1;
+}
+
+CanaryDetailsModal .details-sep {
+    color: #4B5563;
+    margin: 1 0;
+}
+
+CanaryDetailsModal Static {
+    color: #E5E7EB;
+    height: auto;
+}
+
+CanaryDetailsModal #btn-close {
+    margin-top: 2;
+    min-width: 16;
+    border: solid #00A862;
+    background: #141414;
+    color: #E5E7EB;
+    scrollbar-size: 0 0;
+}
+
+CanaryDetailsModal #btn-close:hover {
+    background: #00DC82;
+    color: #0A0A0A;
+}
