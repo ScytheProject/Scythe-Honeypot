@@ -567,18 +567,13 @@ SOFTWARE.
 
 ## 💬 Contact & Crédits
 
-**Auteur** : KronoxDev
-
-**Inspirations** :
-- [Bagels](https://github.com/EnhancedJax/Bagels) — pour la direction artistique TUI
-- [Textual](https://textual.textualize.io/) — pour le framework qui rend tout ça possible
-- La communauté **OSINT / Bellingcat** — pour l'esprit défensif
+**Auteur** : Seïka
 
 ---
 
 <div align="center">
 
-**Si ce projet t'a aidé, laisse une ⭐ sur GitHub !**
+**Laisse une ⭐ sur GitHub !**
 
 *Made with 💚 for security-conscious users*
 
