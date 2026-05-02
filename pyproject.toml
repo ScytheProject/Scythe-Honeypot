@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Personal honeypot for OPSEC - part of the Scythe ecosystem"
 requires-python = ">=3.12"
 authors = [
-    {name = "Your name"}
+    {name = "Seïka"}
 ]
 dependencies = [
     "textual>=0.85",
